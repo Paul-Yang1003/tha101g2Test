@@ -6,8 +6,8 @@
 		<a class="navbar-brand" href="${getContextPath()}/index.html">會員系統</a>
 		<div class="collapse navbar-collapse" id="navbarScroll">
 			<ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-				<li id="register" class="nav-item">
-					<a href="${getContextPath()}/member/register.html" class="nav-link active" aria-current="page">註冊</a>
+				<li id="clinicMember/register" class="nav-item">
+					<a href="${getContextPath()}/clinicMember/register.html" class="nav-link active" aria-current="page">註冊</a>
 				</li>
 				<li id="edit" class="nav-item">
 					<a href="${getContextPath()}/member/edit.html" class="nav-link active" aria-current="page">編輯會員資訊</a>
