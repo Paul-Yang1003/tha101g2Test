@@ -37,12 +37,14 @@ public class ClinicMember {
 	@Column
 	private String clinicPhone;
 	@Column
-	private Timestamp clinicMemberDate;
+	private Timestamp clinicMemberCreateDate;
 	@Column
 	private String clinicAddress;
 	@Column
 	private Blob clinicPhoto;
 	@Column
 	private String clinicService;
+	@Column
+	private Timestamp clinicMemberLastUpdateDate;
 	
 }

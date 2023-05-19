@@ -5,7 +5,7 @@ import web.clinic.clinicMember.entity.ClinicMember;
 
 public interface ClinicMemberDao extends CoreDao<ClinicMember, Integer>{
 	
-	ClinicMemberDao selectByClinicName(String clinicName);
+	ClinicMember selectByClinicName(String clinicName);
 	
-	ClinicMemberDao selectForLogin(String clinicEmail, String clinicPassword);
+	ClinicMember selectForLogin(String clinicEmail, String clinicPassword);
 }

@@ -18,7 +18,7 @@ import org.springframework.transaction.TransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
-@ComponentScan("web.*.*.impl")
+@ComponentScan("web.*.*.*.impl")
 @EnableTransactionManagement
 public class AppConfig {
 	

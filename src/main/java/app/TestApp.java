@@ -6,6 +6,10 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import core.config.AppConfig;
+import web.clinic.clinicMember.entity.ClinicMember;
+import web.clinic.clinicMember.service.ClinicMemberService;
+import web.clinic.clinicMember.dao.ClinicMemberDao;
+
 import web.member.dao.MemberDao;
 import web.member.entity.Member;
 import web.member.service.MemberService;
@@ -25,8 +29,8 @@ public class TestApp {
 //		((ConfigurableApplicationContext) applicationContext).close();
 
 		ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
-		MemberService memberService = applicationContext.getBean(MemberService.class);
-		memberService.findAll().forEach(member -> System.out.println(member.getNickname()));
+		ClinicMemberService clinicMemberService = applicationContext.getBean(ClinicMemberService.class);
+		clinicMemberService.findAll().forEach(member -> System.out.println(member.getClinicName()));
 		((ConfigurableApplicationContext) applicationContext).close();
 
 	}
