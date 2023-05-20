@@ -19,7 +19,7 @@ btn1.addEventListener('click', () => {
     clinicService,
   };
 
-  fetch('http://localhost:8080/tha101g2Test/clinicMember/register.html', {
+  fetch('clinicMember/register', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -27,15 +27,20 @@ btn1.addEventListener('click', () => {
     body: JSON.stringify(formData),
   })
     .then(resp => resp.json())
-    .then(body => {
-      const { successful } = body;
-      if (successful) {
-        // 註冊成功的處理邏輯
-      } else {
-        // 註冊失敗的處理邏輯
-      }
-    })
-    .catch(error => {
-      // 處理發生的錯誤
-    });
-});
+			.then(body => {
+				const { successful } = body;
+				if (successful) {
+					for (let input of inputs) {
+						input.disabled = true;
+					}
+					btn1.disabled = true;
+					msg.className = 'info';
+					msg.textContent = '註冊成功';
+				} else {
+					msg.className = 'error';
+					msg.textContent = '註冊失敗';
+				}
+			});
+	});
+
+})();

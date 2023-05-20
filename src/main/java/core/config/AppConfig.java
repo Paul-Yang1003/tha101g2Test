@@ -33,7 +33,7 @@ public class AppConfig {
 
 	@Bean
 	public SessionFactory sessionFactory() throws IllegalArgumentException, NamingException {
-		return new LocalSessionFactoryBuilder(dataSource()).scanPackages("web.*.entity")
+		return new LocalSessionFactoryBuilder(dataSource()).scanPackages("web.*.*.entity")
 				.addProperties(getHibernateProperties()).buildSessionFactory();
 	}
 

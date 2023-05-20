@@ -15,7 +15,7 @@ import core.util.CommonUtil;
 import web.clinic.clinicMember.entity.ClinicMember;
 import web.clinic.clinicMember.service.ClinicMemberService;
 
-@WebServlet("/Test")
+@WebServlet("/clinicMember/Register")
 public class RegisterServlet extends HttpServlet{
 	private static final long serialVersionUID = 1L;
 	private ClinicMemberService service;
@@ -26,16 +26,14 @@ public class RegisterServlet extends HttpServlet{
 	}
 	
 	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		doPost(req, resp);
-	}
-	
-	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		ClinicMember clinicMember = json2Pojo(req, ClinicMember.class);
+		if (clinicMember == null) {
+			clinicMember = new ClinicMember();
+			writePojo2Json(resp, clinicMember);
+			return;
+		}
 		clinicMember = service.register(clinicMember);
 		writePojo2Json(resp, clinicMember);
-		System.out.println("123");
-		
 	}
 }
