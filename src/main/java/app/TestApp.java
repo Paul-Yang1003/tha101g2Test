@@ -3,16 +3,9 @@ package app;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import core.config.AppConfig;
-import web.clinic.clinicMember.entity.ClinicMember;
 import web.clinic.clinicMember.service.ClinicMemberService;
-import web.clinic.clinicMember.dao.ClinicMemberDao;
-
-import web.member.dao.MemberDao;
-import web.member.entity.Member;
-import web.member.service.MemberService;
 
 public class TestApp {
 

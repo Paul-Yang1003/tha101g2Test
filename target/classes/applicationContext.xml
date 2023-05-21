@@ -3,7 +3,6 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="memberDao" class="web.member.dao.impl.MemberDaoImpl" />
 	<bean id="clinicMemberDao" class="web.clinic.clinicMember.dao.impl.ClinicMemberDaoImpl" />
 
 </beans>

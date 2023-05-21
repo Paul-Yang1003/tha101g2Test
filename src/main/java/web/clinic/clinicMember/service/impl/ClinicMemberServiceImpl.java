@@ -27,4 +27,9 @@ public class ClinicMemberServiceImpl implements ClinicMemberService {
 		return clinicMemberDao.selectAll();
 	}
 
+	@Override
+	public boolean remove(Integer id) {
+		return clinicMemberDao.deleteById(id) > 0;
+	}
+
 }

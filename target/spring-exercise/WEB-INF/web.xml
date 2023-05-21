@@ -9,7 +9,7 @@
 
 	<request-character-encoding>UTF-8</request-character-encoding>
 	<response-character-encoding>UTF-8</response-character-encoding>
-
+	<!-- Spring Start -->
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
@@ -23,4 +23,17 @@
 		<param-name>contextConfigLocation</param-name>
 		<param-value>core.config.AppConfig</param-value>
 	</context-param>
+	<!-- Spring End -->
+
+	<!-- HibernateFilter Start -->
+	<filter>
+		<filter-name>HibernateFilter</filter-name>
+		<filter-class>
+			org.springframework.orm.hibernate5.support.OpenSessionInViewFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>HibernateFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<!-- HibernateFilter End -->
 </web-app>
